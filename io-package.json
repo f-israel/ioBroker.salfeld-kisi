@@ -1,0 +1,106 @@
+{
+	"common": {
+		"name": "salfeld-kisi",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"uk": "Початкова версія",
+				"zh-cn": "首次出版"
+			}
+		},
+		"titleLang": {
+			"en": "Salfeld Kindersicherung",
+			"de": "Salfeld Kindersicherung",
+			"ru": "Зальфельд Детские сады",
+			"pt": "Educação Infantil Salfeld",
+			"nl": "Salfeld Kindersicherung",
+			"fr": "Salfeld Kindersicherung",
+			"it": "Salfeld Kindersicherung",
+			"es": "Escuela infantil de Salfeld",
+			"pl": "Salfeld Kindersicherung",
+			"uk": "Salfeld Kindersicherung",
+			"zh-cn": "萨尔菲尔德儿童教育"
+		},
+		"desc": {
+			"en": "salfeld-kisi",
+			"de": "salfeld-kisi",
+			"ru": "Салфельд-Киси",
+			"pt": "salfeld-kisi",
+			"nl": "salfeld-kisi",
+			"fr": "salfeld-kisi",
+			"it": "salfeld-kisi",
+			"es": "salfeld-kisi",
+			"pl": "salfeld-kisi",
+			"uk": "сальфельд-кісі",
+			"zh-cn": "萨尔费尔德基西"
+		},
+		"authors": ["f-israel <israel@fi-lan.net>"],
+		"keywords": ["salfeld kisi kindersicherung"],
+		"licenseInformation": {
+			"type": "free",
+			"license": "MIT"
+		},
+		"platform": "Javascript/Node.js",
+		"icon": "salfeld-kisi.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/f-israel/ioBroker.salfeld-kisi/main/admin/salfeld-kisi.png",
+		"readme": "https://github.com/f-israel/ioBroker.salfeld-kisi/blob/main/README.md",
+		"loglevel": "info",
+		"tier": 3,
+		"mode": "daemon",
+		"type": "communication",
+		"compact": true,
+		"connectionType": "cloud",
+		"dataSource": "poll",
+		"adminUI": {
+			"config": "json"
+		},
+		"dependencies": [
+			{
+				"js-controller": ">=6.0.11"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": "7.0.23"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
